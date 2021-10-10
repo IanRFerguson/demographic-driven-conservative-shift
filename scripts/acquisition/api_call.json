@@ -1,0 +1,31 @@
+{
+  "2010": {
+    "census-vars": [
+      "P003001",
+      "P003002",
+      "P004001",
+      "P004002",
+      "P004003"
+    ],
+    "url": "https://api.census.gov/data/2010/dec/sf1?get=NAME,{}&for=state:*&key={}"
+  },
+  "2020": {
+    "census-vars": [
+      "P1_001N",
+      "P1_003N",
+      "P2_001N",
+      "P2_002N",
+      "P2_003N"
+    ],
+    "url": "https://api.census.gov/data/2020/dec/pl?get=NAME,{}&for=state:*&key={}"
+  },
+  "master": [
+    "state",
+    "total_pop",
+    "white_pop",
+    "total_pop2",
+    "non_hispanic_pop",
+    "hispanic_pop",
+    "street_code"
+  ]
+}
