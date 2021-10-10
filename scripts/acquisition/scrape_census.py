@@ -41,7 +41,7 @@ def load_API():
       # Make sure the number of parameters per year are equivalent
       test_len = len(call[list(call.keys())[0]])
 
-      for k in list(call.keys()):
+      for k in ['2010', '2020']:
             if len(call[k]) != test_len:
                   raise ValueError(f'Length mismatch in API call @ {k}')
 
