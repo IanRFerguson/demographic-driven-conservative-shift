@@ -4,3 +4,6 @@ scripts/acquisition/__pycache__/scrape_census.cpython-37.pyc
 scripts/acquisition/SECRET_api-key.txt
 *.ipynb
 data/HSall_members.csv
+.DS_Store
+.Rhistory
+*.pyc
