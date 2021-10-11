@@ -41,7 +41,7 @@ def load_API():
       # Make sure the number of parameters per year are equivalent
       test_len = len(call[list(call.keys())[0]])
 
-      for k in ['2010', '2020']:
+      for k in ['2000', '2010', '2020']:
             if len(call[k]) != test_len:
                   raise ValueError(f'Length mismatch in API call @ {k}')
 
@@ -51,7 +51,7 @@ def load_API():
 def format_call(API_KEY, YEAR, API_DATA):
       """
       API_KEY => Valid key from Census.gov
-      YEAR => 2010 or 2020
+      YEAR => 2000, 2010, 2020
       API_DATA => Dictionary object
 
       This function creates a complete API call
@@ -66,7 +66,7 @@ def format_call(API_KEY, YEAR, API_DATA):
 def scrape_census(API_KEY, YEAR, API_DATA):
       """
       API_KEY => Valid key from Census.gov
-      YEAR => 2010 or 2020
+      YEAR => 2000, 2010, 2020
       API_DATA => Dictionary object
       """
 
@@ -96,7 +96,7 @@ def main():
       # Empty list to append into
       frames = []
 
-      for year in tqdm(['2010', '2020']):
+      for year in tqdm(['2000', '2010', '2020']):
             temp = scrape_census(key, year, call)
             temp['year'] = [year] * len(temp)
             frames.append(temp)
