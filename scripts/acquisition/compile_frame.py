@@ -25,7 +25,7 @@ def load_frames():
       """
 
       data_dir = os.path.join('../../data')
-      ideo = pd.read_csv(os.path.join(data_dir, 'lawmaker-subset-111-117.csv'))
+      ideo = pd.read_csv(os.path.join(data_dir, 'lawmaker-subset-106-117.csv'))
       states = pd.read_csv(os.path.join(data_dir, 'state-demographics.csv'))
 
       with open('./states.json') as incoming:
@@ -72,7 +72,7 @@ def main():
       ideo['state'] = ideo['state_abbrev'].apply(lambda x: longform_state_id(x, states))
       frames = []
 
-      for year, session in zip([2010, 2020], [112, 117]):
+      for year, session in zip([2000, 2010, 2020], [106, 111, 117]):
             # Subset demographics data by year
             temp = demo[demo['year'] == year].reset_index(drop=True)
 
