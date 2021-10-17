@@ -7,3 +7,8 @@ data/HSall_members.csv
 .DS_Store
 .Rhistory
 *.pyc
+data/ideo/HSall_members.csv
+data/ideo/County Presidential Returns 2000-2020.md
+data/ideo/countypres_2000-2020.csv
+data/ideo/state-ideo-data.csv
+data/ideo/lawmaker-subset-106-117.csv
