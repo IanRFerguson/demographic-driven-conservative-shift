@@ -1,0 +1,67 @@
+{
+  "2000": {
+    "census-vars": [
+      "P003001",
+      "P003003",
+      "P004001",
+      "P004003",
+      "P004002",
+      "P004005"
+    ],
+    "url": {
+      "state":"https://api.census.gov/data/2000/dec/sf1?get=NAME,{}&for=state:*&key={}",
+      "county":"https://api.census.gov/data/2000/dec/sf1?get=NAME,{}&for=county:*&key={}"
+    }
+  },
+  "2010": {
+    "census-vars": [
+      "P003001",
+      "P003002",
+      "P004001",
+      "P004002",
+      "P004003",
+      "P005003"
+    ],
+    "url": {
+      "state":"https://api.census.gov/data/2010/dec/sf1?get=NAME,{}&for=state:*&key={}",
+      "county":"https://api.census.gov/data/2010/dec/sf1?get=NAME,{}&for=county:*&key={}"
+    }
+  },
+  "2020": {
+    "census-vars": [
+      "P1_001N",
+      "P1_003N",
+      "P2_001N",
+      "P2_003N",
+      "P2_002N",
+      "P2_005N"
+    ],
+    "url": {
+      "state":"https://api.census.gov/data/2020/dec/pl?get=NAME,{}&for=state:*&key={}",
+      "county":"https://api.census.gov/data/2020/dec/pl?get=NAME,{}&for=county:*&key={}"
+    }
+  },
+  "master": {
+    "state":[
+      "state",
+      "total_pop",
+      "white_pop",
+      "total_pop2",
+      "non_hispanic_pop",
+      "hispanic_pop",
+      "non_hispanic_white_pop",
+      "state_code"
+  ],
+    "county":[
+      "county_state",
+      "total_pop",
+      "white_pop",
+      "total_pop2",
+      "non_hispanic_pop",
+      "hispanic_pop",
+      "non_hispanic_white_pop",
+      "state_code",
+      "county_code"
+  ]
+    }
+}
