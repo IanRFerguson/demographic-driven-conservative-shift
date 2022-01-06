@@ -1,4 +1,3 @@
-
 scripts/acquisition/.ipynb_checkpoints/99-Sandbox-checkpoint.ipynb
 scripts/acquisition/__pycache__/scrape_census.cpython-37.pyc
 scripts/acquisition/SECRET_api-key.txt
@@ -7,9 +6,10 @@ data/HSall_members.csv
 .DS_Store
 .Rhistory
 *.pyc
-data/ideo/HSall_members.csv
-data/ideo/County Presidential Returns 2000-2020.md
-data/ideo/countypres_2000-2020.csv
-data/ideo/state-ideo-data.csv
-data/ideo/lawmaker-subset-106-117.csv
-scripts/analysis/sandbox/*.R
+scripts/hate-speech-classifier/credentials.json
+data/tweet-data/feat.cat_met_a30_2000_cp_w.msgs.cnty.1gra.csv
+data/tweet-data/feat.1gram.msgs.cnty.16to16.csv
+data/hate-crime-data/~$department-of-justice.xlsx
+data/demographic-data/county-demographics.csv
+data/hate-crime-data/department-of-justice.xlsx
+data/county-demographics.csv
