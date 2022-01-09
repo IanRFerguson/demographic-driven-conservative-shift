@@ -8,3 +8,4 @@ data/tweet-data/.DS_Store
 *.xlsx
 *.txt
 data/tweet-data/fips-codes-to-scrape.json
+scripts/hate-speech-classifier/credentials.json
