@@ -1,4 +1,4 @@
-# Ambient Demographic Dynamics as a Predictor of Behavior Change
+# Ambient Demographic Change as a Predictor of Online Hate Speech
 
 This project seeks to quantify behavioral differences in areas with rapidly changing racial demographics. Expanding on the substantial experimental literature in this area, the current project leverages Census and Twitter data to assess differences in online speech between areas with high, medium, and low degrees of racial change in the last 20 years.
 
