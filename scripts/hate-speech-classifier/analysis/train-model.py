@@ -37,6 +37,8 @@ def clean_text_data(DF, VAR):
       # Remove extraneous characters
       DF[VAR] = DF[VAR].apply(lambda x: re.sub(r"(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|^rt|http.+?", "", x))
 
+      
+
       # Remove all whitespace
       DF[VAR] = DF[VAR].str.strip()
                             
