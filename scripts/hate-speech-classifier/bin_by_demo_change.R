@@ -89,7 +89,7 @@ plot_usmap(data = census.wide, regions = 'county', values = 'hispanic_population
         theme(plot.title = element_text(hjust = 0.5, face='bold'),
               plot.subtitle = element_text(hjust = 0.5),
               legend.position = "bottom") +
-        scale_fill_continuous(type = 'viridis')
+        scale_fill_continuous(low = 'white', high = my_colors[2])
 
 
 # -- Binned
@@ -113,6 +113,28 @@ plot_usmap(data = census.wide, regions = 'county', values = 'hispanic_change_bin
               legend.position = 'bottom') +
         scale_fill_manual(values = my_colors, labels = c('Low', 'Med', 'High'))
 
+plot_usmap(data = census.wide, regions = 'county', values = '')
+
+census.wide %>% 
+        arrange(desc(hispanic_population_change)) %>% 
+        filter(state_name == ' Georgia') %>% 
+        select(state_name, county_name, hispanic_population_change) %>% head()
+
+plot_usmap(data = census.wide, regions = 'county', values = 'hispanic_population_change',
+           include=c('GA'), color = 'black') +
+        scale_fill_continuous(type = 'viridis') +
+        labs(fill = '', title = 'Hispanic Population % Deltas',
+             subtitle = '2000 to 2020') +
+        theme(plot.title = element_text(hjust = 0.5, face = 'bold'),
+              plot.subtitle = element_text(hjust = 0.5))
+
+plot_usmap(data = census.wide, regions = 'county', values = 'nhw_population_change',
+           include=c('GA'), color = 'black') +
+        scale_fill_continuous(type = 'viridis') +
+        labs(fill = '', title = 'Non-Hispanic White Population % Deltas',
+             subtitle = '2000 to 2020') +
+        theme(plot.title = element_text(hjust = 0.5, face = 'bold'),
+              plot.subtitle = element_text(hjust = 0.5))
 
 # Write DataFrame to local CSV
-write.csv(census.wide, file = './data/demographic-data/tidy-population-changes.csv', fileEncoding = 'utf-8')
+#write.csv(census.wide, file = './data/demographic-data/tidy-population-changes.csv', fileEncoding = 'utf-8')
