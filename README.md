@@ -22,7 +22,16 @@ This project seeks to quantify behavioral differences in areas with rapidly chan
 
 ### Analysis
 
+* A `stochastic gradient descent classifier` was trained on labeled hate speech data from a previous project, yielding a reasonable `F1` score of `0.96`
 
-{ ongoing }
+* A first-pass at analysis did not demonstrate significant differences between racial change counties in this project (neither global tweets nor user-to-user mentions yielded differences here)
 
+<img src="./plots/analysis/breakdown-all-tweets.png" width=65%>
 
+* A secondary analysis using AFINN polarity scores did not yield significant differences either, after tokenizing each tweet and averaging the valence
+
+<img src="./plots/analysis/polarity-all-tweets.png" width=65%>
+
+## Future Directions
+
+To best understand the relationship between status threat and online behavior, a more reliable geographic marker will be required (Twitter Places are not nearly fine-grain enough for our purposes, especially in rural counties). Options here may include NextDoor or other public forums, where access is allowable only to residents of that particular area. More to come!
