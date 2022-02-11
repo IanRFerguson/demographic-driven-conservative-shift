@@ -80,3 +80,25 @@ summary.tokens %>%
         labs(x = "AFINN Polarity Values", y ="", ccaption = "Mentions Only") +
         theme(legend.position = "none") +
         scale_y_discrete(labels=c('High', 'Mid', 'Low'))
+
+
+tokenized.data %>% 
+        filter(idx <= 125) %>% 
+        select(word, value) %>% 
+        group_by(word) %>% 
+        summarise(count = n(), value = first(value)) %>% 
+        mutate(fill_color = ifelse(value > 0, T, F)) %>% 
+        arrange(desc(value)) %>% 
+        ggplot(aes(x = value, y = reorder(word, +value), fill = fill_color)) +
+        geom_col(alpha = 0.95) +
+        scale_fill_brewer(palette = "Set1") +
+        theme_minimal() +
+        labs(x = "AFINN Polarity Value", y = "") +
+        theme(legend.position = "none")
+
+tokenized.data %>% 
+        ggplot(aes(x = value)) +
+        geom_density(fill = my_colors[4]) +
+        theme_minimal() +
+        labs(x = "AFINN Polarity Value", y = "") +
+        coord_cartesian(xlim = c(-6, 6))
